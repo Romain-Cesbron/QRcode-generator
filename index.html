@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="block">
-        <img src="images/mascot.png" id="mascot_img">
-        <input type="url" placeholder="Copy your url here" id="qr_url_input">
-        <button id="generate_bt">Generate QR code</button>
+    <div class="container">
+        <h1 class="title">
+            <span class="blue">Q</span><span class="red">R</span><span class="yellow">c</span><span class="blue">o</span><span class="green">d</span><span class="red">e</span> <span class="blue">Generator</span>
+            <!--<span class="yellow">g</span><span class="blue">e</span><span class="green">n</span><span class="red">e</span><span class="blue">r</span><span class="yellow">a</span><span class="green">t</span><span class="red">o</span><span class="blue">r</span>  -->  
+        </h1>
+        <div class="row">
+            <input type="url" placeholder="Copy your url here" id="qr_url_input">
+            <button id="generate_bt">Generate QR code</button>    
+        </div>
         <div id="qr_space"></div>
         <button id="download_bt">Download</button>
     </div>

@@ -7,54 +7,101 @@ body {
     background-color: rgb(251, 248, 255);
 }
 
-.block {
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0px 0px 10px 2px grey;
 }
+
+.title {
+    font-family: 'Product Sans', Arial, sans-serif; /* Google's font or close approximation */
+    font-size: 48px; /* Adjust size as needed */
+    font-weight: 800;
+    letter-spacing: 0px;
+    margin: 20px 0;
+}
+.title .blue {
+    color: #4285F4; /* Blue */
+}
+
+.title .red {
+    color: #EA4335; /* Red */
+}
+
+.title .yellow {
+    color: #FBBC05; /* Yellow */
+}
+
+.title .green {
+    color: #34A853; /* Green */
+}
+
 
 #mascot_img {
     width: 30%;
     margin-bottom: 20px;
 }
 
-#qr_url_input {
-    width: 100%;
-    max-width: 300px;
-    height: 40px;
-    margin: 10px 0;
-    border-radius: 14px;
+#qr_url_input, #generate_bt {
+    box-sizing: border-box;
+    height: 45px; 
+    margin: 0; 
     border: 1px solid #ccc;
-    padding: 0 10px;
-    box-shadow: 0px 0px 3px 2px grey;
 }
 
-#generate_bt, #download_bt {
+
+#qr_url_input {
+    max-width: 700px;
+    border-radius: 14px 0px 0px 14px; 
+    border-right: none;
+}
+
+
+#generate_bt {
+    max-width: 300px;
+    border-radius: 0px 14px 14px 0px;
+    border-left: none; 
+    background-color: #4285F4; 
+    color: white;
+    cursor: pointer;
+}
+
+
+#qr_url_input:focus, #generate_bt:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+#generate_bt:hover {
+    background-color: #2868cf;
+}
+
+
+#download_bt {
     width: 100%;
     max-width: 300px;
     height: 40px;
     margin: 10px 0;
-    border-radius: 14px;
+    border-radius: 10px;
     border: 1px solid #ccc;
-    background-color: #007BFF;
+    background-color: #4285F4;
     color: white;
     cursor: pointer;
-    box-shadow: 0px 0px 3px 2px grey;
 }
 
 #qr_space {
     margin: 20px 0;
-    width: 100%;
-    max-width: 300px;
+    width: 300px;
     height: 300px;
-    display: flex;
     align-items: center;
     justify-content: center;
     background-color: #f0f0f0;
-    border-radius: 14px;
     box-shadow: 0px 0px 3px 2px grey;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
 }

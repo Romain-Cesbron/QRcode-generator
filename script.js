@@ -10,8 +10,8 @@ document.getElementById('generate_bt').addEventListener('click', function () {
 function createQR(qr_url) {
     new QRCode(qr_space, {
         text: qr_url,
-        width: 128,
-        height: 128,
+        width: qr_space.clientWidth,
+        height: qr_space.clientHeight,
         colorDark: "#000000",
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H
