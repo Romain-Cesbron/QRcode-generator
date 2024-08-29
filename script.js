@@ -7,6 +7,8 @@ document.getElementById('generate_bt').addEventListener('click', function () {
     createQR(qr_url);
 });
 
+let qrElement = null
+
 function createQR(qr_url) {
     new QRCode(qr_space, {
         text: qr_url,
@@ -16,4 +18,18 @@ function createQR(qr_url) {
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H
     });
+    qrElement = document.querySelector('img')
+
 }
+
+const download_bt = document.getElementById('download_bt')
+download_bt.addEventListener('click',function(){
+    console.log('haaaan')
+    if (qrElement){
+        let link = document.createElement('a')
+        link.href = qrElement.src
+        link.download = 'qrcode.png'
+        link.click()
+    }
+    else  {}
+})
